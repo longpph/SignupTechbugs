@@ -1,16 +1,26 @@
 <h2>Đăng ký tham gia săn lỗi</h2>
-Họ và tên:
-<input type="text" placeholder="Nhập tên"> <br><br>
-Email liên hệ:
-<input type="text" placeholder="Nhập email"> <br><br>
-Mật khẩu hệ thống:
-<input type="text"> <br><br>
-Trình độ của bạn:
-<input type="radio" value="Newbie"> Mới tập chơi
-<input type="radio" value="Pro"> Chuyên nghiệp
-<br><br>
-Kinh nghiệm nền tảng:
-<input type="checkbox" value="Web"> Web
-<input type="checkbox" value="Mobile"> Mobile App
-<br><br>
-<button>Đăng ký ngay</button>
+<form action="" method="post">
+    <fieldset>
+        <legend>Thông tin cá nhân</legend>
+        <Label for="ten">Họ và tên: 
+            <input type="text" name="ten" id="ten" placeholder="Nhập tên" required></Label><br><br>
+        <label for="email">Email liên hệ:
+            <input type="email" name="email" id="email" placeholder="Nhập email" required></label><br><br>
+        <label for="matkhau">Mật khẩu: 
+            <input type="password" name="matkhau" id="matkhau" placeholder="Mật khẩu" required></label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Trình độ chuyên môn</legend>
+        <Label for="moi">
+        <input type="radio" name="trinhdo" id="moi" value="Newbie" required>Mới tập chơi</Label>
+        <label for="cu">
+            <input type="radio" name="trinhdo" id="cu" value="Pro" required>Chuyên nghiệp</Label>
+            <br><br>
+        Kinh nghiệm nền tảng:<br>
+        <Label for="web">
+        <input type="checkbox" name="kinhnghiem[]" id="web" value="Web"> Web</Label>
+        <label for="app">
+        <input type="checkbox" name="kinhnghiem[]" id="app" value="Mobile"> Mobile App</label>
+    </fieldset>
+    <button type="submit">Đăng ký</button>
+</form>
